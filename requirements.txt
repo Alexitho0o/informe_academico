@@ -1,7 +1,7 @@
 streamlit
 pandas
 numpy
-plotly
 openpyxl
+plotly
+pillow
 xlsxwriter
-Pillow
