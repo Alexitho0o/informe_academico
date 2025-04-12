@@ -36,7 +36,7 @@ Esta aplicación permite generar informes visuales y automatizados a partir de a
 
 ## ▶️ Acceso a la aplicación
 
-👉 [Haz clic aquí para usar la app en línea](https://ip-san-sebastian-informe.streamlit.app)
+👉 [Haz clic aquí para usar la app en línea](https://ip-san-sebastian-informe.streamlit.app/)
 
 > Puedes usarla desde cualquier dispositivo con conexión a internet.
 
