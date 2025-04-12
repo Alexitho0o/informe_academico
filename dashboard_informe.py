@@ -3,9 +3,25 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 from io import BytesIO, StringIO
+from PIL import Image  # <== IMPORTANTE para cargar el logo
+import os  # Para verificar existencia del archivo
 
 # === Configuración de la página ===
 st.set_page_config(page_title="📊 Informe Académico", layout="wide")
+
+# === Mostrar el logo alineado a la derecha (manejo robusto de errores) ===
+if os.path.exists("logo_sansebastian.png"):
+    try:
+        logo = Image.open("logo_sansebastian.png")
+        col1, col2, col3 = st.columns([6, 1, 1])
+        with col3:
+            st.image(logo, width=900)
+    except Exception as e:
+        st.warning(f"⚠️ No se pudo cargar el logo correctamente: {e}")
+else:
+    st.info("ℹ️ Logo no disponible en este entorno.")
+
+# === Título de la aplicación ===
 st.title("📄 Informe Académico Interactivo")
 
 # === Escala embebida de conversión de puntaje a nota ===
